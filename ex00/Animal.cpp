@@ -2,7 +2,7 @@
 
 Animal::Animal():_type("Default")
 {
-    std::cout << "Animal default onstructor called" << std::endl;
+    std::cout << "Animal default constructor called" << std::endl;
 }
 Animal::Animal(const Animal &obj)
 {
@@ -17,6 +17,14 @@ Animal& Animal::operator=(const Animal &obj)
         _type = obj._type;
     }
     return *this;
+}
+void Animal::makeSound() const
+{
+    std::cout << "AU AU" << std::endl;
+}
+std::string Animal::getType() const
+{
+    return (_type);
 }
 Animal::~Animal()
 {
