@@ -3,6 +3,7 @@
 Cat::Cat():Animal()
 {
     std::cout << "Cat default onstructor called" << std::endl;
+    _type = "Cat";
 }
 Cat::Cat(const Cat &obj): Animal()
 {

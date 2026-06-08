@@ -20,7 +20,7 @@ Animal& Animal::operator=(const Animal &obj)
 }
 void Animal::makeSound() const
 {
-    std::cout << "AU AU" << std::endl;
+    std::cout << "ANIMAL SOUND !!!! " << std::endl;
 }
 std::string Animal::getType() const
 {

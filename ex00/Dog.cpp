@@ -3,6 +3,7 @@
 Dog::Dog():Animal()
 {
     std::cout << "Dog default onstructor called" << std::endl;
+    _type = "Dog";
 }
 Dog::Dog(const Dog &obj): Animal()
 {
@@ -20,7 +21,7 @@ Dog& Dog::operator=(const Dog &obj)
 }
 void Dog::makeSound() const
 {
-    std::cout << _type << "says WOOF" << std::endl;
+    std::cout << _type << " says WOOF" << std::endl;
 }
 
 Dog::~Dog()
