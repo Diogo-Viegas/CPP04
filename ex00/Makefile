@@ -1,6 +1,6 @@
 C++ = c++
 C++_FLAGS = -Wall -Wextra -Werror -std=c++98
-INFILES = 	main.cpp Dog.cpp Cat.cpp Animal.cpp
+INFILES = 	main.cpp Dog.cpp Cat.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJFILES = $(INFILES:.cpp=.o)
 
