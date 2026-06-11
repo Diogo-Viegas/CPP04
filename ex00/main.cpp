@@ -3,22 +3,28 @@
 #include "Cat.hpp"
 int main()
 {
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    const WrongAnimal* k = new WrongAnimal();
-    const WrongAnimal* l = new WrongCat();
+    const Animal* animal = new Animal();
+    const Animal* dog = new Dog();
+    const Animal* cat = new Cat();
+    const WrongAnimal* wrongAnimal = new WrongAnimal();
+    const WrongAnimal* wrongCat = new WrongCat();
     
-    std::cout << meta->getType() << " " << std::endl;
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    std::cout << k->getType() << " " << std::endl;
-    std::cout << l->getType() << " " << std::endl;
+    std::cout << BOLD << animal->getType() << RESET << std::endl;
+    std::cout << BOLD << dog->getType() << RESET << std::endl;
+    std::cout << BOLD << cat->getType() << RESET << std::endl;
+    std::cout << BOLD << wrongAnimal->getType() << RESET << std::endl;
+    std::cout << BOLD << wrongCat->getType() << RESET << std::endl;
 
-    meta->makeSound();
-    i->makeSound(); 
-    j->makeSound();
-    l->makeSound();
-    k->makeSound();
+    animal->makeSound();
+    dog->makeSound();
+    cat->makeSound();
+    wrongAnimal->makeSound();
+    wrongCat->makeSound();
+
+    delete animal;
+    delete dog;
+    delete cat;
+    delete wrongAnimal;
+    delete wrongCat;
     return (0);
 }

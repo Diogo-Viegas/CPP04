@@ -1,6 +1,9 @@
 #ifndef WRONGANIMAL_HPP
 #define WRONGANIMAL_HPP
 #include <iostream>
+#define RED     "\033[31m"
+#define RESET   "\033[0m"
+#define CYAN    "\033[36m"
 class WrongAnimal
 {
     protected:
@@ -9,8 +12,8 @@ class WrongAnimal
         WrongAnimal();
         WrongAnimal(const WrongAnimal& copy);
         WrongAnimal& operator=(const WrongAnimal& copy);
-        ~WrongAnimal();
         void makeSound() const;
         std::string getType() const;
+        virtual ~WrongAnimal();
 };
 #endif

@@ -2,17 +2,17 @@
 
 Cat::Cat():Animal()
 {
-    std::cout << "Cat default onstructor called" << std::endl;
+    std::cout << YELLOW "Cat default constructor called" RESET << std::endl;
     _type = "Cat";
 }
 Cat::Cat(const Cat &obj): Animal()
 {
-    std::cout << "Cat copy constructor called " << std::endl;
+    std::cout << YELLOW "Cat copy constructor called" RESET << std::endl;
     *this = obj;
 }
 Cat& Cat::operator=(const Cat &obj)
 {
-    std::cout << "Cat copy assignment operator called" << std::endl;
+    std::cout << YELLOW "Cat copy assignment operator called" RESET << std::endl;
     if(this != &obj)
     {
         _type = obj._type;
@@ -21,10 +21,10 @@ Cat& Cat::operator=(const Cat &obj)
 }
 void Cat::makeSound() const
 {
-    std::cout << _type  << "says MEOW" << std::endl;
+    std::cout << YELLOW << _type << " says MEOW" << RESET << std::endl;
 }
 
 Cat::~Cat()
 {
-    std::cout << "Cat default Destructor called" << std::endl;
+    std::cout << YELLOW "Cat default Destructor called" RESET << std::endl;
 } 

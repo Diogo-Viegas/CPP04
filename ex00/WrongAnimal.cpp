@@ -2,16 +2,16 @@
 
 WrongAnimal::WrongAnimal():_type("Default")
 {
-    std::cout << "WrongAnimal default constructor called" << std::endl;
+    std::cout << RED "WrongAnimal default constructor called" RESET << std::endl;
 }
 WrongAnimal::WrongAnimal(const WrongAnimal &obj)
 {
-    std::cout << "WrongAnimal constructor called " << std::endl;
+    std::cout << RED "WrongAnimal copy constructor called" RESET << std::endl;
     *this = obj;
 }
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal &obj)
 {
-    std::cout << "WrongAnimal copy assignment operator called" << std::endl;
+    std::cout << RED "WrongAnimal copy assignment operator called" RESET << std::endl;
     if(this != &obj)
     {
         _type = obj._type;
@@ -20,7 +20,7 @@ WrongAnimal& WrongAnimal::operator=(const WrongAnimal &obj)
 }
 void WrongAnimal::makeSound() const
 {
-    std::cout << "WrongAnimal SOUND !!!! " << std::endl;
+    std::cout << RED << _type << " says WRONG ANIMAL SOUND !!!! " << RESET << std::endl;
 }
 std::string WrongAnimal::getType() const
 {
@@ -28,5 +28,5 @@ std::string WrongAnimal::getType() const
 }
 WrongAnimal::~WrongAnimal()
 {
-    std::cout << "WrongAnimal default Destructor called" << std::endl;
+    std::cout << RED "WrongAnimal default Destructor called" RESET<< std::endl;
 } 
