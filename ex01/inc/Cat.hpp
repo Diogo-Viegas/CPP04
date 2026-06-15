@@ -11,6 +11,8 @@ class Cat:public Animal
         Cat(const Cat& copy);
         Cat& operator=(const Cat& copy);
         ~Cat();
+        std::string getIdea(int idea_nr) const;
+        Brain *getBrain() const;
         void makeSound(void) const;
 };
 

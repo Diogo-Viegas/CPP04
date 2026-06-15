@@ -8,7 +8,7 @@ INC_DIR     = inc
 OBJ_DIR     = obj
 
 
-INFILES     = main.cpp Dog.cpp Cat.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp
+INFILES     = main.cpp Dog.cpp Cat.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 
 SRC_FILES   = $(addprefix $(SRC_DIR)/, $(INFILES))
 
