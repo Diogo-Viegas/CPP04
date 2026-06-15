@@ -11,7 +11,7 @@ class Dog:public Animal
         Dog(const Dog& copy);
         Dog& operator=(const Dog& copy);
         void makeSound() const;
-        std::string getIdea(int idea_nr) const;
+        std::string think(int idea_nr) const;
         Brain * getBrain() const;
         ~Dog();
         

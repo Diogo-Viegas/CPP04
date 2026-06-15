@@ -120,6 +120,10 @@ Brain &Brain::operator=(const Brain &copy)
     std::cout << "Brain copy assignment constructor called\n";
     return (*this);
 }
+std::string Brain::getIdea(int n) const
+{
+    return (_ideas[n]);
+}
 Brain::~Brain()
 { 
     std::cout << "Brain deconstructor called\n";

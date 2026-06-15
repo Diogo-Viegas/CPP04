@@ -51,9 +51,9 @@ void testDeepCopy(void)
 
        
         std::cout << " ==== THOUGHTS ==== " << std::endl;
-        std::cout << originalDog.getType() << " thought -> " << originalDog.getIdea(12) << std::endl;
-        std::cout << copyDog.getType() << " thought -> " << copyDog.getIdea(34) << std::endl;
-        std::cout << assignedDog.getType() << " thought -> " << assignedDog.getIdea(23) << std::endl;
+        std::cout << originalDog.getType() << " thought -> " << originalDog.think(12) << std::endl;
+        std::cout << copyDog.getType() << " thought -> " << copyDog.think(34) << std::endl;
+        std::cout << assignedDog.getType() << " thought -> " << assignedDog.think(23) << std::endl;
 
          std::cout << "\n=== Check Brain Memory Adresses ===" << std::endl;
         std::cout << "Original Brain Address: " << originalDog.getBrain() << std::endl;
@@ -74,9 +74,9 @@ void testDeepCopy(void)
 
        
         std::cout << " ==== THOUGHTS ==== " << std::endl;
-        std::cout << originalCat.getType() << " thought -> " << originalCat.getIdea(2) << std::endl;
-        std::cout << copyCat.getType() << " thought -> " << copyCat.getIdea(5) << std::endl;
-        std::cout << assignedCat.getType() << " thought -> " << assignedCat.getIdea(93) << std::endl;
+        std::cout << originalCat.getType() << " thought -> " << originalCat.think(2) << std::endl;
+        std::cout << copyCat.getType() << " thought -> " << copyCat.think(5) << std::endl;
+        std::cout << assignedCat.getType() << " thought -> " << assignedCat.think(93) << std::endl;
 
          std::cout << "\n=== Check Brain Memory Adresses ===" << std::endl;
         std::cout << "Original Brain Address: " << originalCat.getBrain() << std::endl;

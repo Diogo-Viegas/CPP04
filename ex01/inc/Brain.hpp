@@ -4,13 +4,14 @@
 #include <string>
 class Brain
 {
-
-public:
-    Brain();
-    Brain(const Brain &copy);
-    Brain&operator=(const Brain & copy);
-    ~Brain();
-     std::string _ideas[100];
+    private:
+    std::string _ideas[100];
+    public:
+        Brain();
+        Brain(const Brain &copy);
+        Brain&operator=(const Brain & copy);
+        std::string getIdea(int n)const;
+        ~Brain();
 
 };
 #endif

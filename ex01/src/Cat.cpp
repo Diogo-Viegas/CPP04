@@ -34,10 +34,10 @@ void Cat::makeSound() const
     std::cout << YELLOW << _type << " says MEOW" << RESET << std::endl;
 }
 
-std::string Cat::getIdea(int idea_nr) const
+std::string Cat::think(int idea_nr) const
 {
 	if (idea_nr >= 0 && idea_nr < 100)
-		return (_brain->_ideas[idea_nr]);
+		return (_brain->getIdea(idea_nr));
 	else
 		return ("Cat brain just have 100 ideas");
 }
