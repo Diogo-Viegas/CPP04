@@ -7,7 +7,7 @@
 
 void testSubject(void)
 {
-    std::cout << "\n=== 3. SUBJECT WITH SIMPLE POINTERS ===" << std::endl;
+    std::cout << BOLD "\n=== 1. SUBJECT WITH SIMPLE POINTERS ===" RESET<< std::endl;
     const Animal* j = new Dog();
     const Animal* i = new Cat();
     
@@ -17,7 +17,7 @@ void testSubject(void)
 }
 void testArray(void)
 {
-    std::cout << "=== 1. TEST SUBJECT (Animals Array and Destruction) ===" << std::endl;
+    std::cout << BOLD "=== 2. TEST SUBJECT (Animals Array and Destruction) ===" RESET << std::endl;
     const int size = 4;
     Animal* animals[size];
 
@@ -36,7 +36,7 @@ void testArray(void)
 void testDeepCopy(void)
 {
 
-    std::cout << "\n=== 2. DEEP COPY TEST ===" << std::endl;
+    std::cout << BOLD "\n=== 3. DEEP COPY TEST ===" RESET << std::endl;
     {
         std::cout << "Creating original Dog..." << std::endl;
         Dog originalDog;
