@@ -1,21 +1,34 @@
-C++ = c++
-C++_FLAGS = -Wall -Wextra -Werror -std=c++98
-INFILES = 	main.cpp Dog.cpp Cat.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp
 
-OBJFILES = $(INFILES:.cpp=.o)
+C++         = c++
+C++_FLAGS   = -Wall -Wextra -Werror -std=c++98 -I$(INC_DIR)
 
-NAME = a.out
+
+SRC_DIR     = src
+INC_DIR     = inc
+OBJ_DIR     = obj
+
+
+INFILES     = main.cpp Dog.cpp Cat.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp
+
+SRC_FILES   = $(addprefix $(SRC_DIR)/, $(INFILES))
+
+
+OBJFILES    = $(INFILES:%.cpp=$(OBJ_DIR)/%.o)
+
+
+NAME       = Polymorphism
 
 all: $(NAME)
 
-$(NAME):$(OBJFILES)
-	$(C++) $(C++_FLAGS) $(OBJFILES) -o $(NAME) 
+$(NAME): $(OBJFILES)
+	$(C++) $(C++_FLAGS) $(OBJFILES) -o $(NAME)
 
-%.o: %.cpp
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
+	@mkdir -p $(OBJ_DIR)
 	$(C++) $(C++_FLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJFILES)
+	rm -rf $(OBJ_DIR)
 
 fclean: clean
 	rm -f $(NAME)

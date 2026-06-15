@@ -5,10 +5,10 @@ Cat::Cat():Animal()
     std::cout << YELLOW "Cat default constructor called" RESET << std::endl;
     _type = "Cat";
 }
-Cat::Cat(const Cat &obj): Animal()
-{
+Cat::Cat(const Cat &copy): Animal(copy)
+{ 
     std::cout << YELLOW "Cat copy constructor called" RESET << std::endl;
-    *this = obj;
+    *this = copy;
 }
 Cat& Cat::operator=(const Cat &obj)
 {
